@@ -7,6 +7,7 @@
 
 * [Git] 설치된 환경
 * [Gradle] ( Gradle wrapper가 프로젝트에 있기 때문에 옵션 )
+* java IDE ( 옵션 )
 
 [Git]: https://git-scm.com/
 [Gradle]: https://gradle.org/
