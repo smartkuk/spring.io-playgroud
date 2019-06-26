@@ -1,24 +1,33 @@
 buildscript {
-
     repositories {
         mavenCentral()
+        jcenter()
     }
-
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE'
         classpath 'io.spring.gradle:dependency-management-plugin:1.0.8.RELEASE'
     }
 }
 
+allprojects {
+    ext {
+        springbootVersion = '2.1.6.RELEASE'
+    }
+    group 'smart.kuk'
+    version '0.0.1-SNAPSHOT'
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
 subprojects {
-
-    group = 'smart.kuk'
-    version = '0.0.1-SNAPSHOT'
-
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
+    group = 'smart.kuk'
+    version = '0.0.1-SNAPSHOT'
     sourceCompatibility = '1.8'
 
     configurations {
@@ -27,8 +36,10 @@ subprojects {
 
     repositories {
         mavenCentral()
+        jcenter()
     }
 
+    // 서브 모듈에 적용하는 의존성
     dependencies {
         compile 'org.projectlombok:lombok'
         developmentOnly 'org.springframework.boot:spring-boot-devtools'

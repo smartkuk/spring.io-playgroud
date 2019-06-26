@@ -1,14 +1,9 @@
-plugins {
-    id 'java'
-}
-
-group 'smart.kuk'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+/**
+ * 다음 커맨드를 사용해서 실행 가능한 jar 파일을 생성할 수 있다.
+ * ./gradlew clean bootJar
+ */
+bootJar {
+    mainClassName = 'smart.kuk.KukApplication'
 }
 
 dependencies {
